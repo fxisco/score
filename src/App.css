@@ -1,3 +1,16 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  background: url('island.jpg') no-repeat 100% 100%;
+  background-size: cover;
+}
+
+.team-title {
+  color: rgb(127, 255, 0, 1);
+  font-size: 30px;
+  text-shadow: 4px 4px 2px rgba(30,144,255, 0.8) ;
+}
+
 .App {
   text-align: center;
 }
@@ -18,13 +31,20 @@
   font-size: 1.5em;
 }
 
+.title {
+  color: #FF0;
+  letter-spacing: 15px;
+  text-shadow: 4px 4px 2px rgba(255, 150, 150, 1);
+}
+
 .App-intro {
   font-size: large;
 }
 
 .team-points {
+  color: #7fffd4;
   font-size: 40px;
-  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+  text-shadow: 4px 4px 2px rgba(255, 150, 150, 1);
 }
 
 @keyframes App-logo-spin {
@@ -34,4 +54,12 @@
 
 .button-team {
   width: 100%;
+  border-radius: 20px;
+}
+
+.logo {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  max-width: 10%;
 }

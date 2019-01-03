@@ -1,56 +1,57 @@
 import React, { Component } from 'react';
 import './App.css';
+import logo from './logo.png'
 
 const APP_NAME = 'veteScore';
 
 const DEFAULT_TEAMS = {
   1: {
-    name:'Pibes',
+    name:'Grupo 1',
     points: 0,
     color: '#f44336'
   },
   2: {
-    name:'Mapuches',
+    name:'Grupo 2',
     points: 0,
     color: '#e91e63'
   },
   3: {
-    name:'Parces',
+    name:'Grupo 3',
     points: 0,
     color: '#d500f9'
   },
   4: {
-    name:'Chamos',
+    name:'Grupo 4',
     points: 0,
     color: '#9575cd'
   },
   5: {
-    name:'Kapes',
+    name:'Grupo 5',
     points: 0,
     color: '#3d5afe'
   },
   6: {
-    name:'Patas',
+    name:'Grupo 6',
     points: 0,
     color: '#2979ff'
   },
   7: {
-    name:'Brasucas',
+    name:'Grupo 7',
     points: 0,
     color: '#ffff00'
   },
   8: {
-    name:'Boludos',
+    name:'Grupo 8',
     points: 0,
     color: '#ffb300'
   },
   9: {
-    name:'Los man',
+    name:'Grupo 9',
     points: 0,
     color: '#ff5722'
   },
   10: {
-    name:'Cumpas',
+    name:'Grupo 10',
     points: 0,
     color: '#607d8b'
   },
@@ -67,7 +68,7 @@ const Team = ({ color, id, points, name, handleAddPoint, handleRemovePoint }) =>
       </div>
       <div className="row pb-3">
         <div className="col-sm-12 text-center">
-          <b>{name}</b>
+          <b className="team-title">{name}</b>
         </div>
       </div>
       <div className="row pb-3">
@@ -141,7 +142,8 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid py-5">
-        <h1 className="text-center py-5">Tabla de puntuaciones</h1>
+        <img className="logo" src={logo} alt="Logo Complevivencia 2019" />
+        <h1 className="text-center py-5 title">Puntuaciones</h1>
         <div className="row justify-content-center">
           {Object.keys(this.state.teams).map((id) => {
             const { color, name, points } = this.state.teams[id];
